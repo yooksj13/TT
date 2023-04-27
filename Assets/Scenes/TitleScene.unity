@@ -648,7 +648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NO
+  m_Text: 'NO: X'
 --- !u!222 &509580115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1934,7 +1934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YES
+  m_Text: 'YES: Y'
 --- !u!222 &1183876807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2178,6 +2178,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265344903}
   m_CullTransparentMesh: 1
+--- !u!20 &1321799796 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1893326662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1332185217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2397,7 +2403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
+  m_Text: 'Exit: Y
 
 '
 --- !u!222 &1335173136
@@ -3225,8 +3231,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 1321799796}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -3507,6 +3513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457c814fdbc15fe4c93172652b2b969a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Popup: {fileID: 0}
 --- !u!4 &1936809242
 Transform:
   m_ObjectHideFlags: 0
