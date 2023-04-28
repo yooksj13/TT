@@ -1953,8 +1953,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7409371184443805359}
   splashFx: {fileID: 100002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
-  attackRange: 5
-  chaseRange: 15
+  attackRange: 3
+  chaseRange: 10
   state: 0
   nextState: 0
   navMeshAgent: {fileID: 6594321151805121470}
