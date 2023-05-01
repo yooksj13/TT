@@ -79,29 +79,22 @@ public class GameManager : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.Four) && IsPause == false)//exit
         {
             IsPause = true;
-            Time.timeScale = 0;
+            Time.timeScale = 0.1f;
             Popup.SetActive(true);
-
-            while (true)
-            {
-                if (OVRInput.GetDown(OVRInput.Button.Four) && IsPause == true)//exit yes
-                {
-                    Application.Quit();
-                    break;
-                }
-
-                if (OVRInput.GetDown(OVRInput.Button.Three) && IsPause == true)//exit no
-                {
-                    Popup.SetActive(false);
-                    IsPause = false;
-                    Time.timeScale = 1;
-                    Cursor.visible = false;
-                    break;
-                }
-            }
         }
 
-        
+        if (OVRInput.GetDown(OVRInput.Button.Four) && IsPause == true)//exit yes
+        {
+            Application.Quit();
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.Three) && IsPause == true)//exit no
+        {
+            Popup.SetActive(false);
+            IsPause = false;
+            Time.timeScale = 1;
+            Cursor.visible = false;
+        }
 
         if (OVRInput.GetDown(OVRInput.Button.Start))//start
         {

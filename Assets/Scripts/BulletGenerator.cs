@@ -6,12 +6,11 @@ public class BulletGenerator : MonoBehaviour
 {
     public GameObject BulletPrefeb;
     public GameObject player;
-    public Vector3 ScreenCenter;
-    private OVRGrabbable ovrGrabbable;
+    private OVRGrabber grabber;
 
-    void Awake()
+    void Start()
     {
-        ovrGrabbable = GetComponent<OVRGrabbable>();
+        grabber = GetComponent<OVRGrabber>();
     }
     void Update()
     {
@@ -30,8 +29,9 @@ public class BulletGenerator : MonoBehaviour
 
             Destroy(bullet, 3f);
         }*/
-
-        if (OVRInput.GetDown(OVRInput.RawButton.A) || ovrGrabbable.isGrabbed){
+        
+        if (OVRInput.GetDown(OVRInput.RawButton.A) && grabber.grabbedObject == this.gameObject)
+        {
 
             Vector3 shooting = this.transform.forward;
             shooting = shooting.normalized;
@@ -42,5 +42,19 @@ public class BulletGenerator : MonoBehaviour
 
             Destroy(bullet, 3f);
         }
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            Vector3 shooting = this.transform.right;
+            shooting = shooting.normalized;
+
+            GameObject bullet = Instantiate(BulletPrefeb) as GameObject;
+            bullet.transform.position = this.transform.position + shooting;
+            bullet.GetComponent<BulletController>().Shoot(shooting * 2000);
+
+            Destroy(bullet, 3f);
+        }*/
+        
     }
 }
