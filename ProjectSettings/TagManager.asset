@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FxTemporaire
+  - RoomLight
+  - Speed
+  - Attack
+  - Bullet
+  - popup
   layers:
   - Default
   - TransparentFX

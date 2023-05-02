@@ -30,10 +30,10 @@ public class BulletGenerator : MonoBehaviour
             Destroy(bullet, 3f);
         }*/
         
-        if (OVRInput.GetDown(OVRInput.RawButton.A) && grabber.grabbedObject == this.gameObject)
+        if (OVRInput.GetDown(OVRInput.RawButton.A) /*&& grabber.grabbedObject == this.gameObject*/)
         {
 
-            Vector3 shooting = this.transform.forward;
+            Vector3 shooting = this.transform.right;
             shooting = shooting.normalized;
 
             GameObject bullet = Instantiate(BulletPrefeb) as GameObject;
@@ -46,14 +46,7 @@ public class BulletGenerator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
-            Vector3 shooting = this.transform.right;
-            shooting = shooting.normalized;
-
-            GameObject bullet = Instantiate(BulletPrefeb) as GameObject;
-            bullet.transform.position = this.transform.position + shooting;
-            bullet.GetComponent<BulletController>().Shoot(shooting * 2000);
-
-            Destroy(bullet, 3f);
+            
         }*/
         
     }

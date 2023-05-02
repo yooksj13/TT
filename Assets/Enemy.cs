@@ -209,7 +209,7 @@ public class Enemy : MonoBehaviour
 
             Vector3 direction = this.transform.position - player.transform.position;
             direction = direction.normalized;
-            this.GetComponent<Rigidbody>().AddForce(direction * 1800, ForceMode.Impulse);
+            this.GetComponent<Rigidbody>().AddForce(direction * 3000, ForceMode.Impulse);
 
             GameObject vfx = Instantiate(pushVfx) as GameObject;
             vfx.transform.position = this.transform.position;

@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour
     private static string PlayerName;
 
     public GameObject Popup;
+    public GameObject Canvas;
     public static bool IsPause = false;
 
     void Awake()
     {
+        
+        Popup = GameObject.FindWithTag("popup");
+
+
+
         if (null == instance)
         {
             instance = this;
@@ -25,6 +31,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        
     }
 
     public static GameManager Instance
